@@ -25,7 +25,7 @@ const ExpenseItem = (props) => {
     const decreaseAllocation = (name) => {
         const expense = {
             name: name,
-            cost: -10,
+            cost: 10,
         };
 
         dispatch({
@@ -39,16 +39,6 @@ const ExpenseItem = (props) => {
         <tr>
         <td>{props.name}</td>
         <td>{currency}{props.cost}</td>
-        {/* <td>
-            <button onClick={event=> increaseAllocation(props.name)}>
-                <img src='green_plus.jpg' width="10px" height="10px"></img>
-            </button>
-        </td>
-        <td>
-            <button onClick={event=> decreaseAllocation(props.name)}>
-                <img src='red_minus.ico' width="1.5rem" height="1.5em"></img>
-            </button>
-        </td> */}
         <td>
             <input type="image" src="green_plus.jpg" style={{width: "1.5em"}} onClick={event=> increaseAllocation(props.name)} />
         </td>
